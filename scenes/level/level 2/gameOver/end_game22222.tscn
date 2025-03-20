@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://4rc6x72bo7f3"]
+
+[ext_resource type="Script" path="res://all script/end_game2.gd" id="1_ft8c2"]
+[ext_resource type="Texture2D" uid="uid://dq6u7733aqd06" path="res://asset/End (Idle).png" id="2_2x6hd"]
+[ext_resource type="AudioStream" uid="uid://8gwjmpukigrs" path="res://asset/sound/game-over-470.wav" id="3_8v74i"]
+[ext_resource type="AudioStream" uid="uid://dlwu3u6obfwgr" path="res://asset/sound/bonus-reached-2065.wav" id="4_6jsp6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1u71"]
+size = Vector2(45.899, 44)
+
+[node name="end game" type="Area2D"]
+position = Vector2(71, 81)
+script = ExtResource("1_ft8c2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.499992, -15.5)
+scale = Vector2(1.54688, 1.48438)
+texture = ExtResource("2_2x6hd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.499992, 0)
+scale = Vector2(1.54688, 1.48438)
+shape = SubResource("RectangleShape2D_l1u71")
+
+[node name="gameOverSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8v74i")
+
+[node name="level2Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6jsp6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

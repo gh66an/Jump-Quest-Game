@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://evahchs8ou70"]
+
+[ext_resource type="Script" path="res://all script/end_game_ui.gd" id="1_2d0my"]
+[ext_resource type="Texture2D" uid="uid://c8sispvii8mvc" path="res://asset/gameOver.png" id="2_jppl2"]
+[ext_resource type="FontFile" uid="uid://b2sxc7xhselk4" path="res://asset/Wonder Boys.ttf" id="3_3o2su"]
+[ext_resource type="AudioStream" uid="uid://dmrunfr7erho5" path="res://asset/sound/click-on-mouse.mp3" id="4_rq6vl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o00sq"]
+bg_color = Color(0.827, 0.545, 0.078, 0.845)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.000245483, 0.000245483, 0.000245483, 0.73)
+shadow_size = 5
+shadow_offset = Vector2(0, 0.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxrc8"]
+bg_color = Color(0.307907, 0.191577, 0.00951735, 0.845)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.000245483, 0.000245483, 0.000245483, 0.73)
+shadow_size = 5
+shadow_offset = Vector2(0, 0.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dofn"]
+bg_color = Color(0.036, 0.059, 0.021, 0.845)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.295, 0.295, 0.295, 0.73)
+shadow_size = 5
+shadow_offset = Vector2(0, 0.41)
+
+[node name="endGameUI" type="Node"]
+script = ExtResource("1_2d0my")
+
+[node name="pausePanel" type="Panel" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="pausePanel"]
+texture_filter = 6
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -341.5
+offset_top = 71.0
+offset_right = 341.5
+offset_bottom = 233.0
+grow_horizontal = 2
+texture = ExtResource("2_jppl2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pausePanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -246.5
+offset_top = -363.0
+offset_right = 246.5
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="resume" type="Button" parent="pausePanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.877616, 0.877616, 0.877616, 1)
+theme_override_colors/font_pressed_color = Color(0.219608, 0.141176, 0.113725, 1)
+theme_override_colors/font_focus_color = Color(0.878431, 0.878431, 0.878431, 1)
+theme_override_colors/font_color = Color(0.827563, 0.543611, 0.0787435, 1)
+theme_override_fonts/font = ExtResource("3_3o2su")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxFlat_o00sq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wxrc8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wxrc8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dofn")
+text = "Play again"
+
+[node name="Go-mainMenu" type="Button" parent="pausePanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.877616, 0.877616, 0.877616, 1)
+theme_override_colors/font_pressed_color = Color(0.219608, 0.141176, 0.113725, 1)
+theme_override_colors/font_focus_color = Color(0.878431, 0.878431, 0.878431, 1)
+theme_override_colors/font_color = Color(0.827451, 0.545098, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("3_3o2su")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxFlat_o00sq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wxrc8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wxrc8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dofn")
+text = "Go to main menu"
+
+[node name="clickSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_rq6vl")
+
+[connection signal="pressed" from="pausePanel/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="pausePanel/VBoxContainer/Go-mainMenu" to="." method="_on_gomain_menu_pressed"]

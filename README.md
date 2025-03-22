@@ -18,7 +18,7 @@
 ### 1️⃣ Clone the Repository  
 To modify or contribute to the game, clone the repository using:  
 ```sh
-git clone https://github.com/ghassanalmoqbeli/Jump-Quest-Game.git
+git clone https://github.com/ghassanalmoqbeli/Jump-Quest-Game.git```
 
 ## 🎨 Assets Used  
 This game uses assets from **Pixel Adventure 1** by **Pixel Frog**:  

@@ -12,7 +12,13 @@
 👉 **[Jump Quest v1.0](https://github.com/ghassanalmoqbeli/Jump-Quest-Game/releases/tag/v1.0)**  
 
 ## 🔧 Requirements  
-- **Godot Engine 4.x** (for development purposes)  
+- **Godot Engine 4.x** (for development purposes)
+  
+## 🛠️ How to Download & Use for Development  
+### 1️⃣ Clone the Repository  
+To modify or contribute to the game, clone the repository using:  
+```sh
+git clone https://github.com/ghassanalmoqbeli/Jump-Quest-Game.git
 
 ## 🎨 Assets Used  
 This game uses assets from **Pixel Adventure 1** by **Pixel Frog**:  

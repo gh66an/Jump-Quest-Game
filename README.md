@@ -1,5 +1,6 @@
 # 🎮 Jump Quest Game  
 ![Game Screenshot](https://private-user-images.githubusercontent.com/183935827/425758161-7ab7c2d7-a350-4ac6-ba59-235737cf8f80.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI2NTg0NTYsIm5iZiI6MTc0MjY1ODE1NiwicGF0aCI6Ii8xODM5MzU4MjcvNDI1NzU4MTYxLTdhYjdjMmQ3LWEzNTAtNGFjNi1iYTU5LTIzNTczN2NmOGY4MC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyMlQxNTQyMzZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lNTU4MWU1NTY5NDgxNWY5NjVkNjRkNzJjZDIyYjFkMzA2MmUyYjc4ZTE0ZjMyNDg5ODBkYzRkZjMyNWJkZDQxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.LO2e3-9QxFqhcZ52-Yt5nHFYnD5VRLFI1401MqSiWY8)
+
 **Jump Quest** is a 2D platformer game built with **Godot Engine** using **GDScript**. The game challenges players to jump between platforms and overcome obstacles to reach the final goal.  
 
 ## 🚀 Features  
